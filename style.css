@@ -31,7 +31,7 @@ body {
 }
 
 /*styling header section*/
-header {
+.header {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,6 +43,10 @@ header {
     z-index: 100;
     background: var(--bg-color);
 
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
 .logo {
@@ -91,7 +95,7 @@ section {
     /* Adjust the height as needed */
     overflow: hidden;
     border-radius: 50%;
-    border: 2px solid #083265;
+    /* border: 2px solid #083265; */
 
 }
 
@@ -269,14 +273,193 @@ span {
     width: 100%;
     /* height: 100%; */
     height: auto;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
 }
 
 .portfolio-layer h4 {
     font-size: 3rem;
     margin-bottom: 1rem;
+
 }
 
 .portfolio-layer p {
     font-size: 1.6rem;
     margin-bottom: 2rem;
+}
+
+
+
+/*-----------------------contact-----------------------*/
+.contact h2 {
+    margin-bottom: 5rem;
+
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center;
+    margin-bottom: 2rem; */
+    flex-wrap: wrap;
+}
+
+/* .contact form .input-box input,
+.contact form .input-box textarea {
+    width: calc(50% - 2rem);
+    padding: 1rem;
+    background: var(--secondary-bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--bg-color);
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: .5s ease;
+} */
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--secondary-bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--bg-color);
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: .5s ease;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+
+/*-----------------------footer-----------------------*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--secondary-bg-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+}
+
+/* 
+.footer-iconTop a {
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 4rem;
+    transition: .5s ease;
+    letter-spacing: .1rem;
+} */
+
+.footer-iconTop a {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a i {
+    font-size: 2.5rem;
+    color: var(--secondary-bg-color);
+}
+
+.footer-iconTop a:hover {
+    background: var(--bg-color);
+    color: var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* breakpoints for different screen sizes */
+
+/* for larger  devices */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    .footer {
+        padding: 2rem 3%;
+    }
+
+    /* 
+    .portfolio-box img {
+        width: 100%;
+    .home-img
+        transition: .5s ease;
+    } */
+}
+
+
+/* for small and medium screens*/
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        padding: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        padding: 1rem 3%;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0.5rem 1rem rgba(0, 0, 0, .2);
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .navbar.show {
+        display: flex;
+        flex-direction: column;
+    }
 }
