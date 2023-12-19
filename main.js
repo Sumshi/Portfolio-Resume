@@ -1,3 +1,12 @@
+// toggole menu/icon
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+};
 // select all html elements with type section
 let sections = document.querySelectorAll('section');
 
